@@ -1,0 +1,27 @@
+.privacy-policy h4 {
+  margin-top: 30px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.privacy-policy p,
+.privacy-policy ul li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.privacy-policy ul {
+  padding-left: 20px;
+}
+
+.privacy-policy ul li {
+  margin-bottom: 10px;
+}
+
+.privacy-policy svg {
+  color: #007bff;
+  font-size: 1.2rem;
+}

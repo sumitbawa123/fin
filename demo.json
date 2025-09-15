@@ -1,0 +1,589 @@
+const products = [
+  {
+    id: 1,
+    name: "Hanuman Chalisa Book and Hanuman Ji Kada",
+    price: 1299,
+    originalPrice: 2198,
+    discount: "50% Off",
+    images: [
+               "https://i.ibb.co/XrjBRvXW/IMG-9507.jpg", "https://i.ibb.co/XrjBRvXW/IMG-9507.jpg"
+                "https://i.ibb.co/XrjBRvXW/IMG-9507.jpg", "https://i.ibb.co/XrjBRvXW/IMG-9507.jpg"
+                 "https://i.ibb.co/XrjBRvXW/IMG-9507.jpg", "https://i.ibb.co/XrjBRvXW/IMG-9507.jpg"
+               ],
+    description: "This sacred combo includes a beautifully crafted Hanuman Chalisa book, printed on high-quality paper with vibrant illustrations, paired with an antique silver finish Hanuman Ji Kada. Perfect for daily prayers and spiritual practices.",
+    additionalInfo: "Material: Antique silver finish (kada), premium paper (book). Weight: 150g (kada), 200g (book). Dimensions: Adjustable kada, A5 size book",
+    category: "Spiritual",
+    reviews: [
+      { rating: 5, comment: "Beautifully crafted kada! Quality is amazing.", user: "Amit", date: "2 days ago", verified: true },
+      { rating: 4, comment: "Good quality book with clear printing.", user: "Priya", date: "1 week ago", verified: true },
+      { rating: 5, comment: "Perfect for daily prayers. Highly recommended!", user: "Rohit", date: "2 weeks ago", verified: false }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.5,
+    totalReviews: 1247,
+    specifications: {
+      "Book Details": { "Pages": "64", "Language": "Hindi & Sanskrit", "Size": "A5 (148 x 210 mm)", "Binding": "Perfect Bound" },
+      "Kada Details": { "Material": "Antique Silver Finish Alloy", "Weight": "150g", "Size": "Adjustable (6-8 inches)", "Finish": "Oxidized" }
+    },
+    highlights: ["Premium Quality Materials", "Authentic Hanuman Chalisa Text", "Adjustable Kada Design", "Perfect for Gifting", "Blessed by Pandit Ji"],
+    offers: ["Bank Offer: 10% instant discount on SBI Cards", "No Cost EMI available", "Exchange Offer: Up to ₹500 off"],
+    seller: "Divya Nayan Spiritual Store",
+    warranty: "1 Year Manufacturing Warranty"
+  },
+  {
+    id: 2,
+    name: "Rudraksha and Silver Bead Bracelet",
+    price: 1299,
+    originalPrice: 1999,
+    discount: "70% Off",
+    images: ["https://m.media-amazon.com/images/I/81a+vGkbSPL._SY625_.jpg", "https://m.media-amazon.com/images/I/81a+vGkbSPL._SY625_.jpg"
+              "https://prinjal.com/cdn/shop/files/02_SilverRudrakshBracelet_OM_LifestyleDetailed1.png?v=1709289115"
+               "https://www.jewelyaari.com/cdn/shop/files/810Bu2Mu-3L._SY575.jpg?v=1711894377&width=1445"],
+    description: "This elegant Rudraksha and silver bead bracelet combines the spiritual power of authentic 5-mukhi Rudraksha beads with the timeless shine of sterling silver beads. Perfect for meditation and daily wear.",
+    additionalInfo: "Material: 5-mukhi Rudraksha, 925 sterling silver beads. Bead Size: 6-8mm (Rudraksha), 4mm (silver). Total length: 7.5 inches",
+    category: "Jewelry",
+    reviews: [
+      { rating: 5, comment: "Very stylish and spiritual. Great energy!", user: "Rahul", date: "3 days ago", verified: true },
+      { rating: 4, comment: "Good quality Rudraksha beads.", user: "Sita", date: "5 days ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.3,
+    totalReviews: 892,
+    specifications: {
+      "Bracelet Details": { "Material": "5-Mukhi Rudraksha & 925 Silver", "Length": "7.5 inches", "Bead Size": "6-8mm Rudraksha, 4mm Silver", "Weight": "25g" },
+      "Certification": { "Rudraksha": "Lab Certified Original", "Silver": "925 Sterling Silver", "Origin": "Nepal (Rudraksha)" }
+    },
+    highlights: ["Authentic 5-Mukhi Rudraksha", "925 Sterling Silver Beads", "Spiritual Energy Enhancement", "Unisex Design", "Lab Certified"],
+    offers: ["Special Price: Limited Time Offer", "Bank Offer: 5% cashback on HDFC Cards", "Free Spiritual Consultation"],
+    seller: "Sacred Gems Collection",
+    warranty: "6 Months Warranty"
+  },
+  {
+    id: 3,
+    name: "Black Magic Protection Bracelet",
+    price: 1299,
+    originalPrice: 1999,
+    discount: "70% Off",
+    images: ["https://m.media-amazon.com/images/I/61j2PQEhdmL._SY625_.jpg", "https://m.media-amazon.com/images/I/61j2PQEhdmL._SY625_.jpg"],
+    description: "Crafted with powerful black tourmaline and obsidian stones, this bracelet is designed to shield against negative energies and psychic attacks. A must-have for spiritual protection.",
+    additionalInfo: "Material: Black tourmaline, obsidian, elastic cord. Bead Size: 8mm. Weight: 25g. Stretchable design fits most wrists",
+    category: "Jewelry",
+    reviews: [
+      { rating: 5, comment: "Feels very protective! Noticed positive changes.", user: "Vikram", date: "1 day ago", verified: true },
+      { rating: 4, comment: "Good quality stones, well made.", user: "Maya", date: "4 days ago", verified: false }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.4,
+    totalReviews: 654,
+    specifications: {
+      "Stone Details": { "Primary Stone": "Black Tourmaline", "Secondary Stone": "Obsidian", "Bead Size": "8mm", "Total Beads": "22-24 pieces" },
+      "Bracelet Info": { "Type": "Stretchable", "Cord": "High-Quality Elastic", "Weight": "25g", "Fits": "6-8 inch wrists" }
+    },
+    highlights: ["Genuine Black Tourmaline", "Natural Obsidian Stones", "Negative Energy Protection", "Stretchable Design", "Cleansed & Energized"],
+    offers: ["Flash Sale: 70% Off", "Buy 2 Get 1 Free Protection Kit", "Free Aura Cleansing Guide"],
+    seller: "Mystical Protection Store",
+    warranty: "Lifetime Stone Authenticity"
+  },
+  {
+    id: 4,
+    name: "Depression & Stress Relief Bracelet",
+    price: 1299,
+    originalPrice: 1999,
+    discount: "70% Off",
+    images: ["https://m.media-amazon.com/images/I/71htZ8PhKjL._SX625_.jpg", "https://m.media-amazon.com/images/I/71htZ8PhKjL._SX625_.jpg"],
+    description: "This healing bracelet features a combination of amethyst, rose quartz, and clear quartz to promote emotional balance and reduce stress. Perfect for meditation and daily wellness.",
+    additionalInfo: "Material: Amethyst, rose quartz, clear quartz, elastic cord. Bead Size: 8mm. Weight: 22g. Each stone is hand-selected for quality",
+    category: "Jewelry",
+    reviews: [
+      { rating: 5, comment: "Really calming energy! Helps with anxiety.", user: "Meera", date: "2 days ago", verified: true },
+      { rating: 4, comment: "Beautiful stones, good for meditation.", user: "Arjun", date: "1 week ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.2,
+    totalReviews: 1089,
+    specifications: {
+      "Healing Stones": { "Amethyst": "Grade AA Natural", "Rose Quartz": "High Quality Pink", "Clear Quartz": "Crystal Clear", "Bead Size": "8mm each" },
+      "Therapeutic": { "Chakra": "Heart & Crown", "Benefits": "Stress Relief, Emotional Balance", "Usage": "Daily Wear Recommended" }
+    },
+    highlights: ["Triple Stone Healing Power", "Grade AA Natural Stones", "Stress & Anxiety Relief", "Chakra Balancing", "Hand-Selected Gems"],
+    offers: ["Wellness Sale: 70% Off", "Free Meditation Guide", "Chakra Balancing Session Worth ₹500"],
+    seller: "Healing Crystals India",
+    warranty: "Natural Stone Guarantee"
+  },
+  {
+    id: 5,
+    name: "Marriage Problem Solution Bracelet",
+    price: 1299,
+    originalPrice: 1999,
+    discount: "70% Off",
+    images: ["https://m.media-amazon.com/images/I/912+CeIp2-L._SY625_.jpg", "https://m.media-amazon.com/images/I/912+CeIp2-L._SY625_.jpg"],
+    description: "A powerful blend of rose quartz, rhodonite, and garnet gemstones, this bracelet is designed to foster love, harmony, and understanding in relationships. Ideal for couples seeking peace.",
+    additionalInfo: "Material: Rose quartz, rhodonite, garnet, elastic cord. Bead Size: 8mm. Weight: 23g. Blessed for relationship harmony",
+    category: "Jewelry",
+    reviews: [
+      { rating: 5, comment: "Brought peace to my relationship. Amazing!", user: "Riya", date: "3 days ago", verified: true },
+      { rating: 4, comment: "Beautiful bracelet, good energy.", user: "Karan", date: "1 week ago", verified: false }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.1,
+    totalReviews: 743,
+    specifications: {
+      "Love Stones": { "Rose Quartz": "Premium Pink Grade", "Rhodonite": "Natural Madagascar", "Garnet": "Deep Red Natural", "Combination": "Specially Blessed" },
+      "Relationship": { "Purpose": "Marriage Harmony", "Chakra": "Heart Chakra", "Energy": "Love & Understanding", "Usage": "Both Partners" }
+    },
+    highlights: ["Love & Harmony Stones", "Relationship Healing Power", "Premium Quality Gems", "Couple's Blessing", "Heart Chakra Activation"],
+    offers: ["Couple's Special: Buy 1 Get 1 at 50% Off", "Free Relationship Counseling Session", "Love Compatibility Reading Worth ₹1000"],
+    seller: "Love & Light Gems",
+    warranty: "Relationship Harmony Guarantee"
+  },
+  {
+    id: 6,
+    name: "Mahadev Kada",
+    price: 1199,
+    originalPrice: 1998,
+    discount: "40% Off",
+    images: ["https://rukminim2.flixcart.com/image/832/832/xif0q/bangle-bracelet-armlet/f/a/w/free-2-6-na-1-hanuman-bracelet-0001-rv-jewels-original-imahb5m7gsy23juq.jpeg?q=70&crop=false"],
+    description: "This antique silver finish Mahadev Kada is engraved with sacred Shiva symbols, offering spiritual strength and protection. Perfect for devotees seeking divine blessings.",
+    additionalInfo: "Material: Antique silver finish alloy. Weight: 140g. Dimensions: Adjustable (6-8 inches). Hand-engraved Shiva mantras and symbols",
+    category: "Spiritual",
+    reviews: [
+      { rating: 5, comment: "Feels divine to wear! Excellent craftsmanship.", user: "Nisha", date: "1 day ago", verified: true },
+      { rating: 4, comment: "Good weight and finish. Spiritual energy.", user: "Shiva", date: "5 days ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.6,
+    totalReviews: 956,
+    specifications: {
+      "Kada Details": { "Material": "Premium Alloy", "Finish": "Antique Silver", "Weight": "140g", "Adjustability": "6-8 inches" },
+      "Spiritual": { "Deity": "Lord Shiva", "Engravings": "Om Namah Shivaya", "Symbols": "Trishul, Damru", "Blessing": "Pandit Consecrated" }
+    },
+    highlights: ["Hand-Engraved Shiva Symbols", "Premium Antique Finish", "Adjustable Design", "Spiritual Protection", "Pandit Blessed"],
+    offers: ["Maha Shivratri Special: 40% Off", "Free Rudraksha with Purchase", "Shiva Puja Kit Worth ₹300"],
+    seller: "Divine Shiva Collection",
+    warranty: "1 Year Finish Warranty"
+  },
+  {
+    id: 7,
+    name: "Divya Nayan Baba Shyam Ji Pendant with Chain – Spiritual Protection Amulet",
+    price: 699,
+    originalPrice: 999,
+    discount: "30% Off",
+    images: ["https://i.ibb.co/Jw7M90zj/09-07-2025-5.jpg"],
+    description: "Invoke divine blessings and spiritual protection with the exquisitely crafted Baba Shyam Ji Pendant by Divya Nayan. Made from premium-quality oxidized metal with intricate detailing.",
+    additionalInfo: "Material: Premium oxidized metal. Chain length: 20 inches. Pendant size: 1.5 inches. Weight: 35g. Handcrafted with devotional precision",
+    category: "Jewellery",
+    reviews: [
+      { rating: 5, comment: "Divine energy felt immediately. Excellent quality!", user: "Riya", date: "2 days ago", verified: true },
+      { rating: 4, comment: "Beautiful pendant, good spiritual vibes.", user: "Mohan", date: "1 week ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.3,
+    totalReviews: 567,
+    specifications: {
+      "Pendant": { "Size": "1.5 inches", "Material": "Oxidized Metal", "Design": "Baba Shyam Ji", "Weight": "35g" },
+      "Chain": { "Length": "20 inches", "Type": "Matching Chain", "Clasp": "Secure Lock", "Adjustable": "Yes" }
+    },
+    highlights: ["Handcrafted Design", "Premium Oxidized Finish", "Spiritual Protection", "Comfortable Chain", "Divine Blessings"],
+    offers: ["Festival Special: 30% Off", "Free Spiritual Consultation", "Blessed Pendant Guarantee"],
+    seller: "Divya Nayan Spiritual",
+    warranty: "6 Months Craftsmanship"
+  },
+  {
+    id: 8,
+    name: "Hanuman Chalisa Kavach Pendant | Black Steel Religious Locket",
+    price: 699,
+    originalPrice: 999,
+    discount: "30% Off",
+    images: ["https://i.ibb.co/xSJ2cJ3N/IMG-9477.png"],
+    description: "Bring peace and strength into your life with the Hanuman Chalisa Kavach Pendant, a powerful symbol of devotion, courage, and inner calm. Laser-etched sacred text.",
+    additionalInfo: "Material: Black steel with laser etching. Chain length: 18 inches. Pendant size: 1.2 inches. Weight: 28g. Waterproof and durable finish",
+    category: "Jewellery",
+    reviews: [
+      { rating: 4, comment: "Brings inner peace. Good quality steel.", user: "Ravi", date: "4 days ago", verified: true },
+      { rating: 5, comment: "Perfect size and clear etching.", user: "Anjali", date: "1 week ago", verified: false }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.2,
+    totalReviews: 432,
+    specifications: {
+      "Material": { "Type": "Black Steel", "Finish": "Matte Black", "Etching": "Laser Precision", "Durability": "Waterproof" },
+      "Text": { "Content": "Hanuman Chalisa", "Language": "Sanskrit", "Visibility": "Crystal Clear", "Protection": "Spiritual Kavach" }
+    },
+    highlights: ["Laser-Etched Chalisa", "Waterproof Steel", "Spiritual Protection", "Durable Design", "Clear Text Visibility"],
+    offers: ["Hanuman Jayanti Special: 30% Off", "Free Red Thread", "Spiritual Guide Included"],
+    seller: "Sacred Steel Crafts",
+    warranty: "Lifetime Etching Guarantee"
+  },
+  {
+    id: 9,
+    name: "Shiva Mahamrityunjaya Kavach Pendant | Triangular Design",
+    price: 699,
+    originalPrice: 999,
+    discount: "30% Off",
+    images: ["https://i.ibb.co/WpYwV3kR/16-07-25-1.png"],
+    description: "Channel the divine energy of Lord Shiva with this sacred Shiva Mahamrityunjaya Kavach Pendant, crafted with spiritual intent and deep symbolism in triangular design.",
+    additionalInfo: "Material: Black steel with sacred engravings. Chain length: 20 inches. Pendant size: 1.8 inches triangular. Weight: 40g. Mystical triangular geometry",
+    category: "Jewellery",
+    reviews: [
+      { rating: 5, comment: "Powerful spiritual energy. Unique design!", user: "Amit", date: "1 day ago", verified: true },
+      { rating: 4, comment: "Good quality pendant, feels authentic.", user: "Priya", date: "6 days ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.4,
+    totalReviews: 389,
+    specifications: {
+      "Sacred Geometry": { "Shape": "Triangular", "Size": "1.8 inches", "Symbolism": "Divine Trinity", "Energy": "Mahamrityunjaya" },
+      "Craftsmanship": { "Material": "Premium Black Steel", "Engraving": "Sacred Mantras", "Finish": "Oxidized", "Weight": "40g" }
+    },
+    highlights: ["Sacred Triangular Design", "Mahamrityunjaya Mantra", "Divine Trinity Symbol", "Premium Steel", "Spiritual Geometry"],
+    offers: ["Mystical Monday: 30% Off", "Free Shiva Puja Kit", "Geometric Energy Reading"],
+    seller: "Mystical Shiva Store",
+    warranty: "Sacred Engraving Lifetime"
+  },
+  {
+    id: 10,
+    name: "Panchmukhi Hanuman Ji Divine Pendant with Chain",
+    price: 699,
+    originalPrice: 999,
+    discount: "30% Off",
+    images: ["https://i.ibb.co/wNtYF3wV/Whats-App-Image-2025-07-28-at-3-45-55-PM.jpg"],
+    description: "Bring spiritual strength and protection to your life with this intricately crafted Panchmukhi Hanuman Ji Pendant from Divya Nayan. Five-faced divine power in one pendant.",
+    additionalInfo: "Material: Premium metal alloy with detailed carving. Chain length: 22 inches. Pendant size: 2 inches. Weight: 45g. Hand-detailed five faces",
+    category: "Jewellery",
+    reviews: [
+      { rating: 5, comment: "Magnificent spiritual piece. Amazing detail work!", user: "Deepak", date: "3 days ago", verified: true },
+      { rating: 4, comment: "Heavy and well-made. Spiritual energy.", user: "Suman", date: "1 week ago", verified: false }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.5,
+    totalReviews: 678,
+    specifications: {
+      "Divine Form": { "Faces": "Panchmukhi (5 Faces)", "Size": "2 inches", "Detail": "Hand-Carved", "Significance": "Five Divine Powers" },
+      "Material": { "Type": "Premium Alloy", "Weight": "45g", "Chain": "22 inches", "Finish": "Antique Gold" }
+    },
+    highlights: ["Five Sacred Faces", "Hand-Detailed Carving", "Premium Alloy Material", "Extended Chain Length", "Divine Protection"],
+    offers: ["Hanuman Special: 30% Off", "Free Hanuman Chalisa Book", "Divine Blessing Certificate"],
+    seller: "Divya Nayan Divine",
+    warranty: "Artisan Craft Guarantee"
+  },
+  {
+    id: 11,
+    name: "Money Magnet Bracelet",
+    price: 1299,
+    originalPrice: 1999,
+    discount: "35% Off",
+    images: ["https://m.media-amazon.com/images/I/81a+vGkbSPL._SY625_.jpg", "https://m.media-amazon.com/images/I/81a+vGkbSPL._SY625_.jpg"],
+    description: "Attract wealth and prosperity with this Money Magnet Bracelet featuring pyrite and citrine stones, energized for financial growth and success.",
+    additionalInfo: "Material: Pyrite, citrine, elastic cord. Bead Size: 8mm. Weight: 25g. Stretchable design fits most wrists",
+    category: "Jewelry",
+    reviews: [
+      { rating: 5, comment: "Noticed financial improvements after wearing!", user: "Sanjay", date: "2 days ago", verified: true },
+      { rating: 4, comment: "Beautiful stones, feels energizing.", user: "Neha", date: "5 days ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.3,
+    totalReviews: 821,
+    specifications: {
+      "Stone Details": { "Primary Stone": "Pyrite", "Secondary Stone": "Citrine", "Bead Size": "8mm", "Total Beads": "22-24 pieces" },
+      "Bracelet Info": { "Type": "Stretchable", "Cord": "High-Quality Elastic", "Weight": "25g", "Fits": "6-8 inch wrists" }
+    },
+    highlights: ["Pyrite for Wealth", "Citrine for Prosperity", "Energized for Success", "Stretchable Design", "Lab Certified"],
+    offers: ["Wealth Week Sale: 35% Off", "Free Prosperity Guide", "Bank Offer: 10% off on ICICI Cards"],
+    seller: "Astrotalk Store",
+    warranty: "Lifetime Stone Authenticity"
+  },
+  {
+    id: 12,
+    name: "Evil Eye Protection Necklace",
+    price: 799,
+    originalPrice: 1299,
+    discount: "38% Off",
+    images: ["https://m.media-amazon.com/images/I/61jsgLNOcIL._UY1100_.jpg", "https://m.media-amazon.com/images/I/61t6XmYJO+L._UY1100_.jpg"],
+    description: "Ward off negative energies with this Evil Eye Protection Necklace, featuring a traditional blue eye charm and black onyx beads for added protection.",
+    additionalInfo: "Material: Black onyx, glass evil eye charm, sterling silver chain. Chain length: 20 inches. Weight: 30g",
+    category: "Jewellery",
+    reviews: [
+      { rating: 5, comment: "Feels very protective and stylish!", user: "Anita", date: "3 days ago", verified: true },
+      { rating: 4, comment: "Good quality, love the charm.", user: "Vikas", date: "1 week ago", verified: false }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.2,
+    totalReviews: 512,
+    specifications: {
+      "Necklace Details": { "Charm": "Evil Eye Glass", "Beads": "Black Onyx", "Chain": "925 Sterling Silver", "Length": "20 inches" },
+      "Protection": { "Purpose": "Ward off Evil Eye", "Energy": "Protective", "Blessing": "Cleansed by Experts" }
+    },
+    highlights: ["Traditional Evil Eye Charm", "Black Onyx Protection", "Sterling Silver Chain", "Daily Wear", "Blessed by Astrologers"],
+    offers: ["Protection Sale: 38% Off", "Free Evil Eye Guide", "Buy 2 Get 1 Free"],
+    seller: "Astrotalk Spiritual Store",
+    warranty: "6 Months Craftsmanship"
+  },
+  {
+    id: 13,
+    name: "Rose Quartz Love Pendant",
+    price: 999,
+    originalPrice: 1499,
+    discount: "33% Off",
+    images: ["https://m.media-amazon.com/images/I/41mlmX0CUvL._UY1100_.jpg", "https://www.mypoojabox.in/cdn/shop/products/DSC_3170_1_900x.jpg?v=1598356575"],
+    description: "Enhance love and emotional healing with this Rose Quartz Love Pendant, crafted to activate the heart chakra and attract positive relationships.",
+    additionalInfo: "Material: Rose quartz, 925 sterling silver setting. Chain length: 18 inches. Pendant size: 1.5 inches. Weight: 20g",
+    category: "Jewellery",
+    reviews: [
+      { rating: 5, comment: "Feels so calming and loving!", user: "Pooja", date: "2 days ago", verified: true },
+      { rating: 4, comment: "Beautiful stone, good quality chain.", user: "Rohit", date: "6 days ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.4,
+    totalReviews: 672,
+    specifications: {
+      "Pendant Details": { "Stone": "Rose Quartz", "Setting": "925 Sterling Silver", "Size": "1.5 inches", "Weight": "20g" },
+      "Chakra": { "Type": "Heart Chakra", "Benefit": "Love & Harmony", "Energy": "Positive Relationships" }
+    },
+    highlights: ["Natural Rose Quartz", "Heart Chakra Activation", "Sterling Silver Setting", "Love Attraction", "Lab Certified"],
+    offers: ["Love Sale: 33% Off", "Free Love Compatibility Reading", "Bank Offer: 5% off on Axis Cards"],
+    seller: "Love & Light Gems",
+    warranty: "Natural Stone Guarantee"
+  },
+  {
+    id: 14,
+    name: "Amethyst Meditation Bracelet",
+    price: 1199,
+    originalPrice: 1799,
+    discount: "33% Off",
+    images: ["https://m.media-amazon.com/images/I/51MAppVFppL._UY1100_.jpg", "https://m.media-amazon.com/images/I/51syHjWczbL._UY1100_.jpg"],
+    description: "This Amethyst Meditation Bracelet enhances spiritual awareness and calmness, perfect for meditation and stress relief with high-grade amethyst beads.",
+    additionalInfo: "Material: Amethyst, elastic cord. Bead Size: 8mm. Weight: 22g. Stretchable design fits most wrists",
+    category: "Jewelry",
+    reviews: [
+      { rating: 5, comment: "Helps me focus during meditation!", user: "Kavita", date: "1 day ago", verified: true },
+      { rating: 4, comment: "Good quality stones, feels calming.", user: "Ajay", date: "5 days ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.3,
+    totalReviews: 598,
+    specifications: {
+      "Stone Details": { "Stone": "Amethyst", "Grade": "AA Natural", "Bead Size": "8mm", "Total Beads": "22-24 pieces" },
+      "Bracelet Info": { "Type": "Stretchable", "Cord": "High-Quality Elastic", "Weight": "22g", "Fits": "6-8 inch wrists" }
+    },
+    highlights: ["High-Grade Amethyst", "Spiritual Awareness", "Stress Relief", "Stretchable Design", "Cleansed & Energized"],
+    offers: ["Meditation Sale: 33% Off", "Free Meditation Guide", "Bank Offer: 10% off on SBI Cards"],
+    seller: "Healing Crystals India",
+    warranty: "Lifetime Stone Authenticity"
+  },
+  {
+    id: 15,
+    name: "Ganesha Idol for Prosperity",
+    price: 1499,
+    originalPrice: 2499,
+    discount: "40% Off",
+    images: ["https://cdn.vedicvaani.in/products/extra_large/g/ganesha_idol_lord_of_prosperity_good_luck_17430813372.webp", "https://m.media-amazon.com/images/I/71UVOMFnqjL._UF894,1000_QL80_.jpg"],
+    description: "This intricately carved Ganesha Idol brings prosperity and removes obstacles, crafted from premium resin with gold accents for divine energy.",
+    additionalInfo: "Material: Premium resin with gold finish. Height: 6 inches. Weight: 300g. Handcrafted with detailed carving",
+    category: "Spiritual",
+    reviews: [
+      { rating: 5, comment: "Beautiful idol, feels divine!", user: "Sunil", date: "2 days ago", verified: true },
+      { rating: 4, comment: "Good quality, perfect for pooja.", user: "Lata", date: "1 week ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.5,
+    totalReviews: 789,
+    specifications: {
+      "Idol Details": { "Material": "Premium Resin", "Finish": "Gold Accents", "Height": "6 inches", "Weight": "300g" },
+      "Spiritual": { "Deity": "Lord Ganesha", "Purpose": "Prosperity & Obstacle Removal", "Blessing": "Pandit Consecrated" }
+    },
+    highlights: ["Handcrafted Ganesha", "Gold Finish Accents", "Prosperity Energy", "Perfect for Home Altar", "Blessed by Pandit Ji"],
+    offers: ["Ganesha Chaturthi Sale: 40% Off", "Free Ganesha Mantra Book", "Puja Kit Worth ₹500"],
+    seller: "Divine Idols Store",
+    warranty: "1 Year Craftsmanship"
+  },
+  {
+    id: 16,
+    name: "Karungali Mala for Protection",
+    price: 1599,
+    originalPrice: 2499,
+    discount: "36% Off",
+    images: ["https://m.media-amazon.com/images/I/61+cZl9cFZL._UY1100_.jpg", "https://m.media-amazon.com/images/I/31zr5r5Nl4L._UY1100_.jpg"],
+    description: "This Karungali Mala is made from sacred ebony wood, known for its protective and grounding properties, ideal for meditation and spiritual practices.",
+    additionalInfo: "Material: Karungali (ebony wood). Bead Size: 8mm. Length: 36 inches. Weight: 50g. Hand-knotted for durability",
+    category: "Spiritual",
+    reviews: [
+      { rating: 5, comment: "Powerful mala, feels grounding!", user: "Rakesh", date: "3 days ago", verified: true },
+      { rating: 4, comment: "Good quality wood, well made.", user: "Sonia", date: "6 days ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.4,
+    totalReviews: 623,
+    specifications: {
+      "Mala Details": { "Material": "Karungali Wood", "Bead Size": "8mm", "Length": "36 inches", "Weight": "50g" },
+      "Spiritual": { "Purpose": "Protection & Grounding", "Energy": "Sacred Ebony", "Blessing": "Energized by Experts" }
+    },
+    highlights: ["Sacred Karungali Wood", "Protective Energy", "Hand-Knotted Design", "Ideal for Meditation", "Certified Authenticity"],
+    offers: ["Spiritual Sale: 36% Off", "Free Meditation Guide", "Bank Offer: 5% off on HDFC Cards"],
+    seller: "Astrotalk Store",
+    warranty: "Lifetime Wood Authenticity"
+  },
+  {
+    id: 17,
+    name: "Citrine Wealth Pendant",
+    price: 999,
+    originalPrice: 1499,
+    discount: "33% Off",
+    images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqGcXpbTIp1-pjULDtp3zcAS9-Y2QQY65vd-1M8Wef4y5VKeGuzG5TIL_LexMPyx_AR-8&usqp=CAU", "https://i.etsystatic.com/8616730/r/il/439d00/882758784/il_570xN.882758784_oze7.jpg"],
+    description: "Attract abundance with this Citrine Wealth Pendant, crafted to enhance prosperity and success, set in a sterling silver frame.",
+    additionalInfo: "Material: Citrine, 925 sterling silver. Pendant size: 1.2 inches. Chain length: 18 inches. Weight: 18g",
+    category: "Jewellery",
+    reviews: [
+      { rating: 5, comment: "Feels like it attracts wealth!", user: "Vijay", date: "2 days ago", verified: true },
+      { rating: 4, comment: "Good quality stone and chain.", user: "Nisha", date: "5 days ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.3,
+    totalReviews: 543,
+    specifications: {
+      "Pendant Details": { "Stone": "Citrine", "Setting": "925 Sterling Silver", "Size": "1.2 inches", "Weight": "18g" },
+      "Chakra": { "Type": "Solar Plexus", "Benefit": "Prosperity & Confidence", "Energy": "Abundance" }
+    },
+    highlights: ["Natural Citrine Stone", "Solar Plexus Chakra", "Sterling Silver Setting", "Wealth Attraction", "Lab Certified"],
+    offers: ["Prosperity Sale: 33% Off", "Free Wealth Mantra Guide", "Bank Offer: 10% off on SBI Cards"],
+    seller: "Sacred Gems Collection",
+    warranty: "Natural Stone Guarantee"
+  },
+  {
+    id: 18,
+    name: "Laxmi Yantra Pendant",
+    price: 799,
+    originalPrice: 1299,
+    discount: "38% Off",
+    images: ["https://www.ompoojashop.com/image/cache/yantra/copper-coin-yantras/shri-laxmi-yantra-locket-in-copper-1-2-1000x1000.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgQZL6DrZuBVzYHdNwG6GLItVvIM7dw2gvy9uVugFe25wDjGx00s0QjdEmSBVaO0P7LIc&usqp=CAU"],
+    description: "This Laxmi Yantra Pendant is engraved with sacred symbols to attract wealth and prosperity, crafted in premium brass with gold plating.",
+    additionalInfo: "Material: Brass with gold plating. Pendant size: 1.5 inches. Chain length: 20 inches. Weight: 25g",
+    category: "Jewellery",
+    reviews: [
+      { rating: 5, comment: "Feels blessed and prosperous!", user: "Ankita", date: "1 day ago", verified: true },
+      { rating: 4, comment: "Good craftsmanship, nice design.", user: "Ravi", date: "6 days ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.2,
+    totalReviews: 456,
+    specifications: {
+      "Yantra Details": { "Material": "Brass", "Plating": "Gold", "Size": "1.5 inches", "Weight": "25g" },
+      "Spiritual": { "Purpose": "Wealth & Prosperity", "Symbol": "Laxmi Yantra", "Blessing": "Pandit Consecrated" }
+    },
+    highlights: ["Sacred Laxmi Yantra", "Gold-Plated Brass", "Wealth Attraction", "Spiritual Protection", "Blessed by Pandit Ji"],
+    offers: ["Diwali Special: 38% Off", "Free Laxmi Puja Kit", "Prosperity Reading Worth ₹500"],
+    seller: "Divine Yantra Store",
+    warranty: "6 Months Craftsmanship"
+  },
+  {
+    id: 19,
+    name: "7 Chakra Healing Bracelet",
+    price: 1299,
+    originalPrice: 1999,
+    discount: "35% Off",
+    images: ["https://mesmerizeindia.com/cdn/shop/files/Ultimate_11_Chakra_Natural_Stone_Elastic_Bracelet9-2133-46d2-a0c2-0264e72af65e.jpg?v=1755860713&width=1500", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrb50jJ_f2NxfOMp8sJq3lONUbqtwn2NrQ3kdIFQOimjzepPoDXEORT8HsOz8yhfphwL0&usqp=CAU"],
+    description: "Balance all seven chakras with this vibrant 7 Chakra Healing Bracelet, featuring a mix of natural stones for holistic energy alignment.",
+    additionalInfo: "Material: Amethyst, lapis lazuli, turquoise, green aventurine, citrine, carnelian, red jasper, elastic cord. Bead Size: 8mm. Weight: 25g",
+    category: "Jewelry",
+    reviews: [
+      { rating: 5, comment: "Feels balanced and energized!", user: "Suman", date: "2 days ago", verified: true },
+      { rating: 4, comment: "Beautiful stones, good quality.", user: "Kiran", date: "5 days ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.4,
+    totalReviews: 712,
+    specifications: {
+      "Stone Details": { "Stones": "7 Chakra Stones", "Bead Size": "8mm", "Total Beads": "22-24 pieces", "Weight": "25g" },
+      "Chakra": { "Purpose": "Holistic Balance", "Chakras": "All Seven", "Energy": "Harmonizing" }
+    },
+    highlights: ["7 Natural Chakra Stones", "Holistic Energy Balance", "Stretchable Design", "Lab Certified", "Daily Wear"],
+    offers: ["Chakra Sale: 35% Off", "Free Chakra Guide", "Bank Offer: 5% off on HDFC Cards"],
+    seller: "Healing Crystals India",
+    warranty: "Lifetime Stone Authenticity"
+  },
+  {
+    id: 20,
+    name: "Selenite Wand for Cleansing",
+    price: 999,
+    originalPrice: 1499,
+    discount: "33% Off",
+    images: ["https://shubhanjalistore.com/wp-content/uploads/2020/08/selenite-7-chakra-wand-1.jpg", "https://shubhanjalistore.com/wp-content/uploads/2020/08/selenite-7-chakra-wand-9.jpg"],
+    description: "This Selenite Wand is perfect for cleansing negative energies and promoting spiritual clarity, ideal for meditation and energy work.",
+    additionalInfo: "Material: Natural selenite. Length: 6 inches. Weight: 100g. Smooth polished finish",
+    category: "Spiritual",
+    reviews: [
+      { rating: 5, comment: "Great for cleansing my space!", user: "Priya", date: "3 days ago", verified: true },
+      { rating: 4, comment: "Good quality selenite, smooth finish.", user: "Vikram", date: "1 week ago", verified: true }
+    ],
+    stock: true,
+    delivery: "Free Delivery",
+    returnPolicy: "7-Day Return Policy",
+    certified: true,
+    rating: 4.3,
+    totalReviews: 543,
+    specifications: {
+      "Wand Details": { "Material": "Natural Selenite", "Length": "6 inches", "Weight": "100g", "Finish": "Polished" },
+      "Spiritual": { "Purpose": "Energy Cleansing", "Energy": "Purifying", "Usage": "Meditation & Rituals" }
+    },
+    highlights: ["Natural Selenite", "Energy Cleansing", "Polished Finish", "Spiritual Clarity", "Certified Authenticity"],
+    offers: ["Cleansing Sale: 33% Off", "Free Energy Guide", "Bank Offer: 10% off on ICICI Cards"],
+    seller: "Astrotalk Store",
+    warranty: "Natural Stone Guarantee"
+  },
+],

@@ -1,0 +1,46 @@
+.contact-section {
+  color: #000;
+}
+
+/* Left Side */
+.contact-section h6 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.contact-section h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.contact-section p {
+  color: #333;
+}
+
+/* Social Icons */
+.social-icons a {
+  font-size: 1.2rem;
+  margin-right: 12px;
+  color: #0d47a1;
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  color: #000;
+}
+
+/* Right Side Card */
+.contact-section .card {
+  border-radius: 10px;
+}
+.contact-section .form-control {
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.contact-section .btn-primary {
+  background-color: #0d47a1;
+  border: none;
+}
+.contact-section .btn-primary:hover {
+  background-color: #092a66;
+}

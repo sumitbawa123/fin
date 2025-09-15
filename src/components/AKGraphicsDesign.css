@@ -1,0 +1,171 @@
+/* AKGraphicsDesign.css */
+
+/* Hero Section Overlay */
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* dark transparent overlay */
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #0d6efd; /* Bootstrap primary blue */
+}
+
+/* Cards for services and portfolio */
+.card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.3);
+}
+
+/* Card Titles */
+.card-title {
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+/* Card Text */
+.card-text {
+  color: #555;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .hero-overlay {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+  }
+}
+
+.hover-zoom {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* BrandSection.css */
+
+/* Animate text content from left */
+.text-animate {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s forwards;
+  animation-delay: 0.3s;
+}
+
+/* Animate image from right */
+.image-animate {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.image-animate img {
+  width: 100%;
+  max-width: 600px; /* You can adjust this */
+  height: auto; /* or a fixed height like 400px */
+  transition: transform 0.3s ease;
+}
+
+/* Optional: Zoom effect on hover */
+.image-animate img:hover {
+  transform: scale(1.05);
+}
+
+/* Keyframes */
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Our Portfolio */
+
+.portfolio-img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.portfolio-img-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.6s ease, filter 0.3s ease;
+  filter: brightness(85%);
+}
+
+.portfolio-img-container:hover img {
+  transform: scale(1.1);
+  filter: brightness(100%);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+  padding: 20px 15px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.portfolio-img-container:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
+.portfolio-overlay h5 {
+  margin: 0 0 5px;
+  font-size: 1.1rem;
+  color: #ffc107;
+}
+
+.portfolio-overlay p {
+  margin: 0;
+  font-size: 0.9rem;
+}

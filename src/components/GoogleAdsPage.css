@@ -1,0 +1,91 @@
+.google-ads-page {
+  background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+  min-height: 100vh;
+}
+
+/* Full-width gradient heading */
+.gradient-heading {
+  width: 100%;
+  background: linear-gradient(90deg, #b3d9ff, #0059b3);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.gradient-heading h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.custom-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.custom-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.custom-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.custom-card .card-text {
+  color: #555;
+}
+
+.custom-btn {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #084298;
+}
+
+.promo-banner-section {
+  background-image: url('https://media.istockphoto.com/id/1086352374/photo/minimal-work-space-creative-flat-lay-photo-of-workspace-desk-top-view-office-desk-with-laptop.jpg?s=612x612&w=0&k=20&c=JYBNQsgeO13lU1rq3kUWfD-W0Xii3sFyYzijvsntplY=');
+  background-size: cover;
+  background-position: center;
+  min-height: 50vh; /* Reduced from 80vh to 50vh */
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-banner-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 1;
+}
+
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+

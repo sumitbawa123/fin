@@ -1,0 +1,174 @@
+/* Grow Your Business with Google Ads */
+.slide {
+  position: relative;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  /* padding: 2rem 0; */
+}
+
+/* Different background colors for demo, replace with your images or colors */
+.slide-1 {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+.slide-2 {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+}
+.slide-3 {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+.slide-4 {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* Animation for fade in */
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add animation on carousel-item active */
+.carousel-item.active .slide {
+  animation: fadeInAnimation 1s ease forwards;
+}
+
+/* Text styling */
+.slide h1, 
+.slide p, 
+.slide button {
+  animation: fadeInAnimation 1.5s ease forwards;
+}
+
+.slide p {
+  animation-delay: 0.3s;
+}
+
+.slide button {
+  animation-delay: 0.6s;
+}
+
+/* Center content vertically & horizontally */
+.sle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Optional: Button hover */
+button.btn-light:hover {
+  background-color: #f0f0f0;
+  color: #f7f4f4;
+  transition: all 0.3s ease;
+}
+
+
+
+
+/* Our SEO Services */
+.seo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Each card styling */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+/* Focus style for accessibility */
+.card:focus {
+  box-shadow: 0 0 0 3px #007bff;
+  transform: translateY(-4px);
+}
+
+/* Hover effect */
+.card:hover {
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.15);
+  transform: translateY(-6px);
+}
+
+/* Card padding and spacing */
+.card-body {
+  padding: 1rem;
+}
+
+/* Image styling */
+.seo-card-img {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+
+/* Card title */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Paragraph inside card */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Lists styling */
+.card-list {
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* Bold titles in lists */
+.card-list li strong {
+  font-weight: 700;
+  color: #222;
+}
+
+/* Ordered list margin */
+.card-list ol {
+  list-style-type: decimal;
+}
+
+/* AOS animations */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-out;
+  will-change: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.seo-section .expertise-icon {
+  width: 40px;
+  height: 40px;
+}
+.highlight {
+  color: #007bff;
+}
